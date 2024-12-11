@@ -1,4 +1,4 @@
-package Camera;
+package camera;
 import java.util.*;
 
 public class SDcard {

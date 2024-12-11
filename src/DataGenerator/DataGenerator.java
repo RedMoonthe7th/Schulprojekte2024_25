@@ -1,31 +1,35 @@
-package DataGenerator;
+package datagenerator;
 
 import java.util.Random;
 
 public class DataGenerator {
-    public static int[] generateDataArray(int size) {
-        Random random = new Random();
-        int[] data = new int [size];
 
+    // Generates an integer array with a given size
+    public static int[] generateArray(int size) {
+        int[] array = new int[size];
+        Random random = new Random();
         for (int i = 0; i < size; i++) {
-            data[i] = random.nextInt();
+            array[i] = random.nextInt();
         }
-        return data;
+        return array;
     }
 
-    public static int[] generateDataArrayMinMax(int size, int min, int max) {
+    // Generates an integer array with a given size, with integers in a range
+    // between min and max
+    public static int[] generateArrayInRange(int size, int min, int max) {
+        int[] array = new int[size];
         Random random = new Random();
-        int[] data = new int [size];
-
         for (int i = 0; i < size; i++) {
-            data[i] = random.nextInt();
+            array[i] = random.nextInt((max - min) + 1) + min;
         }
-        return data;
+        return array;
     }
 
-    public void printArray(int[] data) {
-        for (int i = 0; i < data.length; i++) {
-            System.out.println(data[i]);
+    // Prints a given integer array
+    public static void printArray(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
         }
+        System.out.println();
     }
 }

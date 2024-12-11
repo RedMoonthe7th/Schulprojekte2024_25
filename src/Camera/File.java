@@ -1,4 +1,4 @@
-package Camera;
+package camera;
 
 public class File {
 

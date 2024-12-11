@@ -1,4 +1,4 @@
-package CarExceptions;
+package carexceptions;
 
 import java.util.Random;
 
