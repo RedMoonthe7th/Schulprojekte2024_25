@@ -1,24 +1,31 @@
 package store;
 
 public class Shoe implements Product{
+    private String name;
     private int size;
     private int price;
-    private String name;
 
-    public Shoe(int size, int price, String name) {
+    public Shoe(String name, int size, int price) {
+        this.name = name;
         this.size = size;
         this.price = price;
-        this.name = name;
     }
 
     @Override
     public String getName() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return name;
     }
 
     @Override
     public int getPrice() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return price;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setPrice(int price) {
+        this.price = price;
     }
 
 }
